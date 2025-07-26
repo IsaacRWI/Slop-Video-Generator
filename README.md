@@ -10,3 +10,16 @@ I could start editing these videos manually, but I have better things to do, so 
 much of this mind-numbing ordeal I can automate. Starting by scraping trending posts on twitter, compositing the video with
 moviepy, finding trending music on different platforms, and ending it by uploading it automatically to a couple different 
 platforms and maybe do some optimising or smth.
+
+## Preliminary Project Outline
+Following the format set by LahMemeKing and a couple other slop accounts on Youtube the video will be a short form video, 
+with a background video of a ceiling or someone sitting, this will remain unchanged for all future videos to come.   
+The focus of the video and the thing that will actually be changing from video to video will be a popular post ripped off 
+of twitter or reddit, with the post, a picture and the top voted comment or something.
+There will be 2 of these elements per video, either to increase viewer retention as the viewer is reading the posts or to 
+increase the chance of a viewer resonating with the video or something its just a format they use.  
+The background music of the video will be a trending music on the platform of the day, scraped from the platform and will 
+be tagged when the video is posted to *boost variability* 👍👍👍  
+Then the video will be composited together with moviepy as a 5 second video and automatically uploaded to Youtube, Instagram,
+Tik Tok and whichever platform with creator revenue sharing. Multiple times and on multiple accounts to increase exposure.  
+After some time and more data, optimisation of processes can be looked into.
