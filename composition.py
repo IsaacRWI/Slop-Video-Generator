@@ -5,6 +5,8 @@ class Composition:
         self.bg = bg
         self.elm_list = elm_list
         self.bgm = bgm
+        self.elm1 = elm_list[0]
+        self.elm2 = elm_list[1]
 
     # Alternate method
     """    
@@ -35,5 +37,5 @@ class Composition:
     def gen_layout(self):
         bg_clip = VideoFileClip(self.bg)
         bgm_audio = AudioFileClip(self.bgm)
-        elm1 = self.elm_list[0]
-        elm2 = self.elm_list[1]
+        elm1 = ImageClip(self.elm1)
+        elm2 = ImageClip(self.elm2)
