@@ -13,3 +13,8 @@ class Composition:
     def set_bgm(self, bgm = None):
         if bgm is None:
             bgm = self.bgm
+
+    def properties(self):
+        print(f"Background Media: {self.bg}")
+        print(f"Background Music: {self.bgm}")
+        print(f"Featured Elements: {self.elm_list}")
