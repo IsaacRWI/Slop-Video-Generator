@@ -9,3 +9,7 @@ class Composition:
     def set_bg(self, bg = None):
         if bg is None:
             bg = self.bg
+
+    def set_bgm(self, bgm = None):
+        if bgm is None:
+            bgm = self.bgm
