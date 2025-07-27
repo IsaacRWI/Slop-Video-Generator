@@ -1,4 +1,7 @@
 from composition import Composition
-video1 = Composition("default", ["pic1", "pic2"], "Invitation to Dance")
-# video1.get_properties()
+video1 = Composition("saxophone.mp4", ["cheese.jpg", "temperature.png"], "Invitation to Dance.mp3")
+video1.get_properties()
 video1.gen_layout()
+print(video1.bgm)
+video1.set_bgm("End of the Line.mp3")
+print(video1.bgm)
