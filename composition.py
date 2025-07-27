@@ -14,7 +14,13 @@ class Composition:
         if bgm is None:
             bgm = self.bgm
 
-    def properties(self):
+    def get_properties(self):
         print(f"Background Media: {self.bg}")
         print(f"Background Music: {self.bgm}")
         print(f"Featured Elements: {self.elm_list}")
+
+    def gen_layout(self):
+        bg_clip = VideoFileClip(self.bg)
+        bgm_audio = AudioFileClip(self.bgm)
+        elm1 = self.elm_list[0]
+        elm2 = self.elm_list[1]
