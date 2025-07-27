@@ -1,20 +1,29 @@
 from moviepy import *
 
 class Composition:
-    def __init__(self, bg, elm_list, bgm):
+    def __init__(self, bg, elm_list, bgm = None):
         self.bg = bg
         self.elm_list = elm_list
         self.bgm = bgm
 
+    # Alternate method
+    """    
+    def __init__(self, bg, elm_list, bgm = None):
+        self.bg = VideoFileClip(bg)
+        self.bgm = AudioFileClip(bgm)
+        self.elm1 = ImageClip(elm_list[0])
+        self.elm2 = ImageClip(elm_list[1])
+    """
+
     def set_bg(self, bg = None):
         if bg is None:
-            bg = self.bg
+            pass
         else:
             self.bg = bg
 
     def set_bgm(self, bgm = None):
         if bgm is None:
-            bgm = self.bgm
+            pass
         else:
             self.bgm = bgm
 
