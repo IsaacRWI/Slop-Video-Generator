@@ -39,3 +39,5 @@ class Composition:
         bgm_audio = AudioFileClip(self.bgm)
         elm1 = ImageClip(self.elm1)
         elm2 = ImageClip(self.elm2)
+        elm1 = elm1.resized(height = 700)
+        elm2 = elm2.resized(height = 700)
