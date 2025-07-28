@@ -37,7 +37,6 @@ class Composition:
     def gen_layout(self):
         bg_clip = VideoFileClip(self.bg)
         bgm_audio = AudioFileClip(self.bgm)
-        elm1 = ImageClip(self.elm1)
-        elm2 = ImageClip(self.elm2)
-        elm1 = elm1.resized(height = 700)
-        elm2 = elm2.resized(height = 700)
+        elm1 = ImageClip(self.elm1).resized(height = 700).with_position(("center", 800))
+        elm2 = ImageClip(self.elm2).resized(height = 700).with_position(("center", 1300))
+
