@@ -1,5 +1,3 @@
-from moviepy import *
-
 class Element:
     def __init__(self, media, pos):
         self.media = media
