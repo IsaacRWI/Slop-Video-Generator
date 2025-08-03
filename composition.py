@@ -36,9 +36,10 @@ class Composition:
 
     def gen_video(self):
         bg_clip = VideoFileClip(self.bg).with_start(0).with_duration(5).resized(height=1080)
-        bgm_audio = AudioFileClip(self.bgm)
+        bgm_audio = AudioFileClip(self.bgm).with_duration(5)
         # test1 = ImageClip(self.elm1).with_position("center", "top").with_start(0).with_duration(2).resized(height=700)
         elm1 = ImageClip(self.elm1).resized(height = 700).with_position(("center", 20)).with_start(0).with_duration(5)
         elm2 = ImageClip(self.elm2).resized(height = 300).with_position(("center", 400)).with_start(0).with_duration(5)
         final_clip = CompositeVideoClip([bg_clip,elm1, elm2])
+        final_clip.audio = CompositeAudioClip([bgm_audio])
         final_clip.write_videofile("test2.mp4")
