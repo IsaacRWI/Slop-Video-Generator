@@ -34,6 +34,13 @@ class Composition:
         print(f"Background Music: {self.bgm}")
         print(f"Featured Elements: {self.elm_list}")
 
+    def gen_sample(self):
+        bg = ImageClip("frame_sample.png").with_start(0).with_duration(2)
+        elm1 = ImageClip("element_sample.png").with_start(0).with_duration(2).with_position("center", 1)
+        elm2 = ImageClip("element_sample.png").with_start(0).with_duration(2).with_position("center", 1900)
+        final_clip = CompositeVideoClip([bg, elm1, elm2])
+        final_clip.write_videofile("sample.mp4", 24)
+
     def gen_video(self):
         bg_clip = VideoFileClip(self.bg).with_start(0).with_duration(5).resized(height=1080)
         bgm_audio = AudioFileClip(self.bgm).with_duration(5)
