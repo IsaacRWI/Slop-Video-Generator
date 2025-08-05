@@ -2,8 +2,8 @@ from moviepy import *
 
 def gen_sample():
     bg = ImageClip("frame_sample.png").with_start(0).with_duration(2)
-    elm1 = ImageClip("element_sample.png").with_start(0).with_duration(2).with_position("center", 1)
-    elm2 = ImageClip("element_sample.png").with_start(0).with_duration(2).with_position("center", 1900)
+    elm1 = ImageClip("element_sample.png").with_start(0).with_duration(2).with_position(("center", 120))
+    elm2 = ImageClip("element_sample.png").with_start(0).with_duration(2).with_position(("center", 900))
     final_clip = CompositeVideoClip([bg, elm1, elm2])
     final_clip.write_videofile("sample.mp4", 24)
 
