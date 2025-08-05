@@ -1,5 +1,12 @@
 from moviepy import *
 
+def gen_sample():
+    bg = ImageClip("frame_sample.png").with_start(0).with_duration(2)
+    elm1 = ImageClip("element_sample.png").with_start(0).with_duration(2).with_position("center", 1)
+    elm2 = ImageClip("element_sample.png").with_start(0).with_duration(2).with_position("center", 1900)
+    final_clip = CompositeVideoClip([bg, elm1, elm2])
+    final_clip.write_videofile("sample.mp4", 24)
+
 class Composition:
     def __init__(self, bg, elm_list, bgm = None):
         self.bg = bg
@@ -33,13 +40,6 @@ class Composition:
         print(f"Background Media: {self.bg}")
         print(f"Background Music: {self.bgm}")
         print(f"Featured Elements: {self.elm_list}")
-
-    def gen_sample(self):
-        bg = ImageClip("frame_sample.png").with_start(0).with_duration(2)
-        elm1 = ImageClip("element_sample.png").with_start(0).with_duration(2).with_position("center", 1)
-        elm2 = ImageClip("element_sample.png").with_start(0).with_duration(2).with_position("center", 1900)
-        final_clip = CompositeVideoClip([bg, elm1, elm2])
-        final_clip.write_videofile("sample.mp4", 24)
 
     def gen_video(self):
         bg_clip = VideoFileClip(self.bg).with_start(0).with_duration(5).resized(height=1080)
